@@ -1,0 +1,304 @@
+<div class="wrapper">
+
+    <header class="header" id="header">
+        <div class="headTop">
+            <div class="logoBlock">
+                <a class="logo"><img src="../../../assets/img/logo.png" alt="img"></a>
+                <div class="logo-text">
+                    Израильская косметика <br>
+                    для профессионалов
+                </div>
+            </div>
+
+            <div class="headerContacts">
+                Москва, 3-я Фрунзенская 10<br>
+                Пн-Пт 9:00-19:00
+            </div>
+
+            <div class="headerRight">
+                <a href="tel:88003334171" class="phone">8 (800) 333-41-71</a>
+                <a class="buttonPrice" (click)="openDialogForm()">Получить прайс</a>
+                <a href="https://promecatalog.ru/add-sertf/" class="onlineStudy" target="_blank">Онлайн обучение</a>
+            </div>
+
+        </div>
+
+        <div class="headerNav">
+            <a href="#thirdBlock">О бренде</a>
+            <a href="#secondBlock">Продукция</a>
+            <a href="#fouthBlock">Преимущества</a>
+            <a href="#fifthBlock">ADDME</a>
+            <a href="#sixthBlock">Как купить</a>
+            <a href="#seventhBlock">Сертификаты</a>
+            <a href="#eigthBlock">Дистрибьюторы</a>
+        </div>
+    </header>
+
+
+    <div class="content"> 
+
+        <div class="firstBlock">
+            <div class="firstBlockText">
+                <span>ИННОВАЦИОННЫЙ<br>
+            ПОДХОД К КОЖЕ</span>
+            <p>Будущее уже сейчас</p>
+            </div>
+        </div>
+
+        <section id="secondBlock">
+            <div class="secondBlockCenter">
+                
+                <div class="blockTitle">
+                    Безукоризненное качество
+                </div>
+                <p class="blockDesc">Мы уходим от обезличенного, массового подхода в косметологии к индивидуальному подходу к клиенту, за которым будущее. 
+                Наша цель вывести косметологию на новый уровень. Поэтому мы предоставляем профессионалам косметологам уникальную 
+                линейку препаратов-трансформеров, для индивидуального подхода к каждому клиенту, чтобы косметолог, комбинируя препараты,
+                становился практически фармацевтом.</p>
+
+                <div>
+                    <div class="productsBlock">
+                        <div *ngFor="let product of arrOneSecondBlockProducts" class="product">
+                            <img src="{{product.img}}" alt="img">
+                            <div class="productDesc">
+                                <div class="productExplain">
+                                    <a class="productName">{{product.name}}</a>
+                                    <div class="productText">{{product.text}}</div>
+                                    <div class="productInfo">{{product.info}}</div>
+                                </div>
+                                <button (click)="openDialog(product)" class="buttonMore">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="isProductBlockVisible">
+                        <div class="productsBlock productsBlockWrap">
+                            <div *ngFor="let product of arrTwoSecondBlockProducts" class="product">
+                                <img src="{{product.img}}" alt="img">
+                                <div class="productDesc">
+                                    <div class="productExplain">
+                                        <a class="productName">{{product.name}}</a>
+                                        <div class="productText">{{product.text}}</div>
+                                        <div class="productInfo">{{product.info}}</div>
+                                    </div>
+                                    <button (click)="openDialog(product)" class="buttonMore">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="seeMore" (click)="changeVisible()">
+                    <span *ngIf="!isProductBlockVisible">Посмотреть все</span>
+                    <span *ngIf="isProductBlockVisible">Скрыть</span>
+                </button>
+
+                <div class="blockVideo">
+                    <div class="frameBlock">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/snEK0r5paps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+
+                <div (click)="openDialogForm()" class="buttonCatalog">
+                    <a>Получить полный каталог</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="thirdBlock">
+                <div class="thirdBlockTitle"><span>О компании</span></div>
+                <div class="blockVideo">
+                    <div class="frame_blc">
+                        <iframe src="https://www.youtube.com/embed/MonPEP4th0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <p class="blockDesc">ProMe – косметика для профессионалов из Израиля, разработанная ведущими дерматологами и фармацевтами. 
+                “Мы ушли от обезличенного массового подхода в косметологии. Линейка препаратов-трансформеров создана 
+                для индивидуального подхода: cмешивая препараты, специалист тонко подстраивает средства для решения 
+                конкретных проблем кожи.”
+                </p>
+        </section>
+
+        <section id="fouthBlock">
+            <div class="fouthBlockTitle"><span>Преимущества нашей компании</span></div>
+
+            <div class="blockContent">
+                <div class="fouthBlockHalf">
+                    <div class="fouthBlockItem">
+                        <img src="../../../assets/img/block4-img-1.png" alt="img">
+                        <div class="fouthBlockItemText">
+                            Инновационный профессиональный 
+                            израильский бренд, разработанный 
+                            ведущими косметологами, 
+                            дерматологами, фармацевтами.</div>
+                    </div>
+                    <div class="fouthBlockItem">
+                        <img src="../../../assets/img/block4-img-2.png" alt="img">
+                        <div class="fouthBlockItemText">
+                            Индивидуальный подход <br>
+                            к каждому клиенту
+                        </div>
+                    </div>
+                </div>
+                <div class="fouthBlockHalf">
+                    <div class="fouthBlockItem">
+                        <img src="../../../assets/img/block4-img-3.png" alt="img">
+                        <div class="fouthBlockItemText">
+                            Уникальная линейка <br>
+                            домашних уходов
+                        </div>
+                    </div>
+                    <div class="fouthBlockItem">
+                        <img src="../../../assets/img/block4-img-4.png" alt="img">
+                        <div class="fouthBlockItemText">
+                            Результат после первого <br>
+                            использования
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <section id="fifthBlock">
+                <div class="fifthBlockTitle">ADDME</div>
+                <p class="blockDesc">Технология AddMe позволяет косметологам точечно добавлять в кремы, сыворотки, маски, пилинги ProMe такие важные компоненты, 
+                как ретинол, высокоэффективные пептидные комплексы, витамины, альфа- и бета-гидроксикислоты, коллаген, эластин, большое 
+                количество натуральных и растительных ингредиентов.</p>
+
+                <div class="blockContent fifthContent">
+                    <div *ngFor="let product of arrfifthBlockProducts" class="fifthBlockProduct">
+                        <img class="fifthBlockProductImg" src="{{product.img}}" alt="img">
+                        <div class="fifthBlockProductContent">
+                            <a class="fifthBlockProductName">{{product.name}}</a>
+                            <div class="fifthBlockProductText">{{product.text}}</div>
+                            <div class="productInfo">{{product.info}}</div>
+                            <a (click)="openDialog(product)" class="buttonMore">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blockVideo">
+                    <div class="frameBlock">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jykMYijpo7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+        </section>
+
+        <section id="sixthBlock">
+            <div class="sixthBlockCenter">
+                <div class="sixthBlockLeft">
+                    <div class="sixthBlockTitle">Как купить?</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="stepTitle">ШАГ 1</div>
+                            <div class="stepText">Заполните заявку на сайте.</div>
+                        </div>
+                        <div class="step">
+                            <div class="stepTitle">ШАГ 2</div>
+                            <div class="stepText">
+                                В ближайшее время (в рабочие дни, с 9:00 до 19:00)
+                                с Вами свяжется менеджер ProMe, проконсультирует
+                                и запишет на обучение
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="stepTitle">ШАГ 3</div>
+                            <div class="stepText">
+                                После обучения Вы получите сертификат и сможете начать
+                                работать с косметикой  ProMe.
+                            </div>
+                        </div>
+                    </div>
+                    <button (click)="openDialogForm()" class="buttonBuy">Купить</button>
+                </div>
+                <div class="sixthBlockRight">
+                    <img src="../../../assets/img/block6-bg.png">
+                </div>
+            </div>
+                
+        </section>
+
+
+        <section id="seventhBlock">
+                <div class="seventhBlockTitle"><span>Сертификаты</span></div>
+                <p class="blockDesc blockDescMargin">Продукция разработана на основе требований международного стандарта качества  ISO 22716:2007</p>
+                <img src="../../../assets/img/block-8-img.jpg" alt="img">
+        </section>
+
+        <section id="eigthBlock">
+                <div class="eigthBlockTitle">Наши Дистрибьюторы</div>
+                <img src="../../../assets/img/block9-map.png" alt="img">
+                <p class="blockDesc blockDescMargin eigthBlockDesc">Продукция ProMe предназначена только для профессионалов, мы сотрудничаем с салонами, 
+                клиниками и сертифицированными косметологами. Наша сеть дистрибьютеров уже охватывает 
+                все крупные города России, и мы постоянно в поиске новых партнеров.
+                </p>
+                <button (click)="openDialogForm()" class="buttonCatalog">Стать партнером</button>
+        </section>
+
+        <section id="ninethBlock">
+                <div class="seventhBlockTitle">Остались вопросы?</div>
+                <p class="blockDesc ">Оставьте заявку на консультацию и наш менеджер свяжется с Вами в ближайшее время.</p>
+
+                <form class="form">
+                    <input type="text" placeholder="Имя" class="textField" name="name1"> 
+                    <p-inputMask mask="8 (999) 999-9999" class="mainTelInput" placeholder="Телефон" name="phone"></p-inputMask>
+                    <input type="submit" value="Записаться" class="buttonCatalog">
+                </form>
+        </section>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="footerCenter">
+        <a href="#header"><img src="../../../assets/img/logo-white.png" alt="img"></a>
+
+        <div class="footerDesc">
+            <div class="footerDescBox">
+                <div class="footerDescTitle">Производитель</div>
+                <span>
+                    SOMETHING PROFESSIONAL GROUP LTD.<br>
+                    HaShofar St. 53, Ma'ale Adumim, Israel
+                </span>
+            </div>
+
+            <div class="footerDescBox">
+                <div class="footerDescTitle">Адрес:</div>
+                <span>
+                    Москва, 3-я Фрунзенская 10<br>
+                    Пн-Пт 9:00-19:00
+                </span>
+            </div>
+        </div>
+
+        <div class="footerMenu">
+            <a href="#thirdBlock">О бренде</a>
+            <a href="#secondBlock">Продукция</a>
+            <a href="#fouthBlock">Преимущества</a>
+            <a href="#fifthBlock">ADDME</a>
+            <a href="#sixthBlock">Как купить</a>
+            <a href="#seventhBlock">Сертификаты</a>
+            <a href="#eigthBlock">Дистрибьюторы</a>
+        </div>
+        <div class="footerContacts">
+            <a href="tel:88003334171" class="footerPhone">8 (800) 333-41-71</a><br>
+            <a (click)="openDialogForm()" class="buttonCall">Обратный звонок</a>
+            
+            <div class="footerSubs">Подписывайтесь на нас:</div>
+            <div class="footerSocial">
+                <a href="https://www.instagram.com/promecosmetics/" class="instagram" target="_blank">
+                    <img src="../../../assets/img/svg/instagram.svg">
+                </a>
+                <a href="https://www.youtube.com/channel/UCSc9nN0dY-YwupJCPm4qouw" class="youtube" target="_blank">
+                    <img src="../../../assets/img/svg/youtube.svg">
+                </a>
+                <a href="https://www.facebook.com/promedistrib/" class="facebook" target="_blank">
+                    <img src="../../../assets/img/svg/facebook.svg">
+                </a>
+                <a href="https://vk.com/promecosmetics" class="vk" target="_blank">
+                    <img src="../../../assets/img/svg/vk.svg">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+

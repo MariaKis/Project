@@ -1,0 +1,171 @@
+@font-face {
+font-family: 'Avenir';
+src: url('../../../../assets/fonts/AvenirNextCyr-Regular.eot');
+src: local('../../../../assets/fonts/Avenir Next Cyr Regular'), local('AvenirNextCyr-Regular'),
+	url('../../../../assets/fonts/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../../../../assets/fonts/AvenirNextCyr-Regular.woff') format('woff'),
+	url('../../../../assets/fonts/AvenirNextCyr-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Avenir';
+src: url('../../../../assets/fonts/AvenirNextCyr-Demi.eot');
+src: local('../../../../assets/fonts/Avenir Next Cyr Demi'), local('AvenirNextCyr-Demi'),
+	url('../../../../assets/fonts/AvenirNextCyr-Demi.eot?#iefix') format('embedded-opentype'),
+	url('../../../../assets/fonts/AvenirNextCyr-Demi.woff') format('woff'),
+	url('../../../../assets/fonts/AvenirNextCyr-Demi.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Avenir';
+src: url('../../../../assets/fonts/AvenirNextCyr-Bold.eot');
+src: local('../../../../assets/fonts/Avenir Next Cyr Bold'), local('AvenirNextCyr-Bold'),
+	url('../../../../assets/fonts/AvenirNextCyr-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../../../../assets/fonts/AvenirNextCyr-Bold.woff') format('woff'),
+	url('../../../../assets/fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}  
+*{
+	font-family: 'Avenir';
+	color: black;
+}
+.mat-dialog-content{
+	padding: 0;
+}
+
+
+.dialogMain{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contentTop, .contentBottom{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.contentImg{
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contentImg img{
+	width: 140px;
+	height: auto;
+}
+.contentDesc{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.contentDescBlock{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+.contentName{
+	font-size: 20px;
+	font-weight: 500;
+}
+.contentText{
+	font-size: 18px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+.contentinfo{
+	font-size: 18px;
+    margin-top: 20px;
+	font-weight: 550;
+}
+.ingridientName{
+	font-size: 20px;
+	font-weight: 600;
+	color: #347634;
+	margin-top: 20px;
+}
+.ingridientText{
+	font-size: 18px;
+    font-weight: 400;
+}
+.contentBottomBlock{
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.contentBottomName{
+	font-size: 18px;
+	font-weight: 550;
+}
+.contentBottomText{
+	font-size: 16px;
+    margin-top: 14px;
+	font-weight: 40;
+	width: 90%;
+}
+.contentBottom{
+	background: url(../../../../assets/img/modal-bg.jpg) no-repeat center;
+	background-size: cover;
+	padding: 40px 0;
+}
+.closeButton{
+    background: #347634;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid green;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+.formQuery{
+	width: min-content;
+	min-height: 376px
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.blockTitle{
+	font-weight: 450;
+    font-size: 26px;
+}
+.blockDesc{ 
+	width: 75%;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center
+}
+.textField{
+	margin: 10px 50px;
+    height: 60px;
+    font-size: 20px;
+    padding: 0 35px;
+    border-radius: 40px;
+    background: #ebebeb;
+    border: 1px solid #fff;
+    width: 170px;
+}
+.buttonQuery{
+	height: 60px;
+    font-size: 20px;
+    padding: 0 35px;
+	border-radius: 40px;
+	background: #347634;
+    border: 1px solid green;
+    color: #fff;
+}

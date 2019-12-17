@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+	padding: 0;
+}
+html, body { height: 100%; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body .mainTelInput .ui-inputtext, body .mainTelInput{
+	margin: 30px 20px 0 0;
+}
+body .mainTelInput .ui-inputtext{
+    margin: 0;
+    height: 60px;
+    font-size: 20px;
+    padding: 0 35px;
+    border-radius: 40px;
+    background: #ebebeb;
+    border: 1px solid #fff;
+    max-width: 360px;
+}
+
+body .dialogTelInput .ui-inputtext, body .dialogTelInput{
+	margin: 0;
+}
+body .dialogTelInput .ui-inputtext{
+    margin: 10px 50px;
+    height: 60px;
+    font-size: 20px;
+    padding: 0 35px;
+    border-radius: 40px;
+    background: #ebebeb;
+    border: 1px solid #fff;
+    width: 170px;
+}

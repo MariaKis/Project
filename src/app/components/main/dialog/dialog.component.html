@@ -1,0 +1,50 @@
+<div *ngIf="!data.isVisibleForm">
+    <div mat-dialog-content class="dialogMain">
+        <div class="contentTop">
+            <div class="contentImg">
+                <img src="{{data.product.img}}">
+            </div>
+            <div class="contentDesc">
+                <div class="contentDescBlock">
+                    <p class="contentName">{{data.product.name}}</p>
+                    <p class="contentText">{{data.product.desc}}</p>
+                    <p class="contentinfo">{{data.product.info}}</p>
+                </div>
+                <div class="contentDescBlock">
+                    <p class="contentName">Активные ингредиенты</p>
+                    <div *ngFor="let ingridient of data.product.ingridients">
+                        <p class="ingridientName">{{ingridient.name}}</p>
+                        <p class="ingridientText">{{ingridient.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentBottom">
+            <div class="contentBottomBlock">
+                <p class="contentBottomName">Рекомендации</p>
+                <p class="contentBottomText">{{data.product.goal}}</p>
+            </div>
+            <div class="contentBottomBlock">
+                <p class="contentBottomName">Состав:</p>
+                <p class="contentBottomText">{{data.product.eng}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button class="closeButton" mat-button [mat-dialog-close]="true">Закрыть</button>
+    </div>
+</div>
+
+
+<div class="formQuery" *ngIf="data.isVisibleForm" mat-dialog-content>
+    <form class="form">
+        <p class="blockTitle">Остались вопросы?</p>
+        <p class="blockDesc">Оставьте заявку на консультацию, и наш менеджер свяжется с Вами в ближайшее время.</p>
+        <input type="text" placeholder="Имя" class="textField" name="name1"> 
+        <p-inputMask class="dialogTelInput" mask="8 (999) 999-9999" placeholder="Телефон" name="phone"></p-inputMask>
+    </form>
+    <div mat-dialog-actions align="center">
+        <button class="buttonQuery" mat-button [mat-dialog-close]="true">Оставить заявку</button>
+    </div>
+</div>
