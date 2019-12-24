@@ -1,39 +1,3 @@
-@font-face {
-font-family: 'Avenir';
-src: url('../../../assets/fonts/AvenirNextCyr-Regular.eot');
-src: local('../../../assets/fonts/Avenir Next Cyr Regular'), local('AvenirNextCyr-Regular'),
-	url('../../../assets/fonts/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
-	url('../../../assets/fonts/AvenirNextCyr-Regular.woff') format('woff'),
-	url('../../../assets/fonts/AvenirNextCyr-Regular.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-
-@font-face {
-font-family: 'Avenir';
-src: url('../../../assets/fonts/AvenirNextCyr-Demi.eot');
-src: local('../../../assets/fonts/Avenir Next Cyr Demi'), local('AvenirNextCyr-Demi'),
-	url('../../../assets/fonts/AvenirNextCyr-Demi.eot?#iefix') format('embedded-opentype'),
-	url('../../../assets/fonts/AvenirNextCyr-Demi.woff') format('woff'),
-	url('../../../assets/fonts/AvenirNextCyr-Demi.ttf') format('truetype');
-font-weight: 500;
-font-style: normal;
-}
-
-@font-face {
-font-family: 'Avenir';
-src: url('../../../assets/fonts/AvenirNextCyr-Bold.eot');
-src: local('../../../assets/fonts/Avenir Next Cyr Bold'), local('AvenirNextCyr-Bold'),
-	url('../../../assets/fonts/AvenirNextCyr-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../../../assets/fonts/AvenirNextCyr-Bold.woff') format('woff'),
-	url('../../../assets/fonts/AvenirNextCyr-Bold.ttf') format('truetype');
-font-weight: bold;
-font-style: normal;
-}  
-*{
-	font-family: 'Avenir';
-}
-
 .headTop{
 	display: flex;
 	flex-direction: row;
@@ -127,6 +91,7 @@ font-style: normal;
     font-size: 36px;
 }
 .blockTitle::after{
+	display: block;
 	content: '';
     margin-top: 18px;
     width: 14%;
